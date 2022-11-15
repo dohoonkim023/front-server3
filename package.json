@@ -66,5 +66,12 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1"
   },
-  "proxy": "http://3.38.9.104:8081/"
+  "proxy": {
+    "/api/v1": {
+      "target": "http://3.38.9.104:8081/:splat"
+    },
+    "/api/v2": {
+      "target": "http://3.38.9.104:8080/:splat"
+    }
+  }
 }
